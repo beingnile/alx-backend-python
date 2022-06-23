@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+
+
+"""Fixable code
+"""
+
+
+from typing import List, Tuple
+
+
+def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """This function contains a piece of code to be
+    validated by mypy and to be fixed, below is the original
+    code
+
+    def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+    zoomed_in: Tuple = [
+        item for item in lst
+        for i in range(factor)
+    ]
+    return zoomed_in
+
+
+    array = [12, 72, 91]
+
+    zoom_2x = zoom_array(array)
+
+    zoom_3x = zoom_array(array, 3.0)
+    """
+    zoomed_in: List = [
+        item for item in lst
+        for i in range(factor)
+    ]
+    return zoomed_in
+
+
+array = [12, 72, 91]
+
+zoom_2x = zoom_array(tuple(array))
+
+zoom_3x = zoom_array(tuple(array), int(3.0))
