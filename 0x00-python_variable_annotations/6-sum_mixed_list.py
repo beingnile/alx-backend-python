@@ -22,4 +22,4 @@ def sum_mixed_list(mxd_list: List[Union[int, float]]) -> float:
     for val in mxd_list:
         res += val
 
-    return(res)
+    return res
